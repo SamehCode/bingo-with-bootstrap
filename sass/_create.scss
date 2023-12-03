@@ -1,0 +1,22 @@
+@import './colors';
+.create {
+  background-image: url(../theme/images/call-to-action/call-to-action-bg-2.jpg);
+  background-size: cover;
+  .text {
+    color: white;
+    h2 {
+
+      font-size: 1.5rem;
+    }
+    p {
+      margin: 1rem 0 2rem;
+    }
+    button.btn {
+      margin-bottom: 3rem;
+      padding: .5rem 2rem;
+      background-color: $blue-color;
+      border-radius: 40px;
+      font-size: 14px;
+    }
+  }
+}

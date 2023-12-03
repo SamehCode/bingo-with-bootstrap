@@ -1,0 +1,43 @@
+@import './colors';
+footer {
+  .container {
+    .row {
+      .line {
+        color: #999;
+        &.one {
+          p {
+            font-size: .8rem;
+            line-height: 1.7;
+          }
+        }
+        > h5 {
+          font-size: .9rem;
+          margin-bottom: 1rem;
+          color: white;
+        }
+        ul {
+          li {
+            font-size: .8rem;
+            text-transform: capitalize;
+            margin-bottom: .5rem;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+              color: $blue-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copy {
+    font-size: .7rem;
+    color: #777;
+    letter-spacing: 1px;
+    p {
+      span {
+        color: $blue-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import './colors';
+.bingo-agency {
+  .container {
+    .main-title {
+      h2 {
+
+      }
+      p {
+        color: #777;
+        font-size: 14px;
+        margin: 1rem 0 3rem;
+      }
+    }
+    .row {
+      .check-lis {
+        li {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          font-size: 14px;
+          color: #777;
+          margin-bottom: 1rem;
+          &::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+          }
+        }
+        + a.btn {
+          padding: .5rem 2rem;
+          background-color: $blue-color;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}

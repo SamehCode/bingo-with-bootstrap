@@ -1,0 +1,101 @@
+@use '../sass/colors' as *;
+@use '../sass/mixins' as *;
+.landing {
+  height: 100vh;
+  position: relative;
+  background-image: url(../theme/images/slider/slider-bg-2.jpg);
+  background-size: cover;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(black, .3);
+    z-index: 99;
+  }
+  .carousel {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .carousel-control-prev {
+      z-index: 99999;
+      width: 60px;
+      height: 60px;
+      background-color: $blue-color;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -200px;
+      transition: .4s;
+      &.show {
+        left: 20px;
+
+      }
+      cursor: pointer;
+    }
+    .carousel-control-next {
+      z-index: 99999;
+      width: 60px;
+      height: 60px;
+      background-color: $blue-color;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -200px;
+      transition: .5s;
+      &.show {
+        right: 20px;
+      }
+      cursor: pointer;
+    }
+  .carousel-inner {
+    top: 35%;
+    z-index: 9999;
+    .carousel-item {
+      opacity: 0;
+      &.active {
+        transition: .5s;
+        opacity: 1;
+        h1 {
+          animation: scroll-up .3s ease-in;
+        }
+        p {
+          animation: scroll-up .5s linear;
+          animation-delay: 1s;
+        }
+        button {
+          animation: scroll-up .7s linear;
+          animation-delay: 1.5s;
+        }
+      }
+      color: white;
+      text-transform: capitalize;
+      h1 {
+        line-height: 1.3;
+        font-size: 3rem;
+      }
+      p {
+        line-height: 1.5;
+        margin: .5rem 0;
+        font-size: 14px;
+      }
+      button {
+        border-radius: 1rem;
+        padding: .6rem 2rem;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        background-color: $blue-color;
+      }
+    }
+  }
+}
+}
+
+@include scroll-up;

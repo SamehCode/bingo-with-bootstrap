@@ -1,0 +1,19 @@
+.latest-post {
+  .container {
+    .main-heading {
+      h2 {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100px;
+          height: 2px;
+          background-color: #ccc;
+          bottom: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

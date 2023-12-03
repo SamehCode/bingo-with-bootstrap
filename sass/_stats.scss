@@ -1,0 +1,29 @@
+@use './colors' as *;
+.stats {
+  .container {
+    .main-heading {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        line-height: 1.7;
+        color: #777;
+        font-size: 14px;
+      }
+    }
+    .stat {
+      svg {
+        color: $blue-color;
+      }
+      p {
+        margin: .7rem 0;
+        font-weight: 700;
+        font-size: 2rem;
+
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

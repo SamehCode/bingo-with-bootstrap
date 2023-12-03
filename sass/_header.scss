@@ -1,0 +1,265 @@
+@import '../sass/vars';
+@import '../sass/colors';
+header {
+  position: fixed;
+  background-color: transparent;
+  height: 85px;
+  width: 100%;
+  z-index: 999999;
+  transition: .3s;
+  @media ($maxMedium) {
+    background-color: white;
+    height: 60px;
+  }
+
+  &.scrl {
+    background-color: white;
+    .row {
+      .logo {
+        h3 {
+          color: #000;
+        }
+      }
+      ul.links {
+        li {
+          &.sub {
+            > a {
+              color: #000;
+            }
+            &::after {
+              color: #000;
+            }
+          }
+
+          a {
+            color: #000 !important;
+            &.active {
+              color: $blue-color !important;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .row {
+    height: 100%;
+    .logo {
+      h3 {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        @media ($maxMedium) {
+          color: #000;
+      }
+    }
+
+  }
+  ul.links {
+    @media ($maxMedium) {
+      display: none !important;
+    }
+    &.vert {
+      @media ($maxMedium) {
+        display: flex !important;
+        flex-direction: column;
+        background-color: white;
+        align-items: center;
+        width: 100%;
+        padding: .7rem 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        li {
+          a {
+            color: #000 ;
+            @media ($minLarge) {
+              color: #000 !important;
+            }
+            &.active {
+              color: $blue-color !important;
+            }
+          }
+        }
+      }
+      li {
+        &.sub {
+          a {
+            @media ($minLarge) {
+              color: #000;
+
+            }
+            &.active {
+              color: $blue-color;
+            }
+            ul.drop-menu {
+              &.clicked {
+                position: static;
+                min-width: 550px;
+                padding: 0.5rem;
+                margin-left: -15rem;
+                  li {
+                    text-align: center;
+                  }
+              }
+
+            }
+          }
+          }
+
+          &::after {
+            right: -20px;
+            color: #000;
+          }
+        }
+        a {
+          color: #000;
+        }
+      }
+    }
+    li {
+      text-align: center;
+      width: 85px;
+      width: calc(100% / 8);
+        &.sub {
+          position: relative;
+          padding-right: 8px;
+          &:hover {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+          &::after {
+            content: '\f107';
+            position: absolute;
+            right: -1px;
+            font-size: 10px;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: white;
+            top: 6px;
+          }
+            ul.drop-menu {
+              &.clicked {
+                @media ($minLarge) {
+                  width: 130px;
+                  margin-left: auto;
+                  margin-top: 10px;
+                  li {
+                    text-align: left !important;
+                  }
+                }
+                visibility: visible;
+                position: static;
+                width: 550px;
+                margin-left: -15rem;
+                li {
+                  text-align: center;
+                  a {
+                    color: white;
+                  }
+                }
+              }
+            }
+
+          a {
+            color: white;
+          }
+      }
+      a {
+        text-transform: uppercase;
+        font-size: 11px;
+        color: white !important;
+        letter-spacing: 1px;
+        position: relative;
+        transition: .3s;
+        font-weight: 700;
+        &.active {
+          color: $blue-color !important ;
+        }
+        &:hover {
+          color: $blue-color;
+
+        }
+      }
+      ul.drop-menu {
+        position: absolute;
+        background-color: #000;
+        visibility: hidden;
+        width: 120px;
+        padding: 8px;
+        top: 27px;
+        left: 0;
+        z-index: 999999;
+
+        li {
+          text-align: left;
+          padding: 8px;
+          width: 100%;
+          &.sub-2 {
+          height: 50px;
+          position: relative;
+          &::after {
+            content: '\f107';
+            position: absolute;
+            right: 16px;
+            font-size: 10px;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: white;
+            top: 15px;
+          }
+          ul.sub2 {
+            visibility: hidden;
+            position: relative;
+            left: 100px;
+            top: -25px;
+            width: 120px;
+            z-index: 999999;
+            &.col-clicked {
+
+              visibility: visible;
+              position: static;
+              margin-top: 1.8rem;
+              width: 95%;
+              margin-left: 0.8rem;
+              margin-bottom: .5rem;
+            }
+            li {
+              background-color: #000;
+              min-width: fit-content;
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      }
+    }
+  }
+  .toggle {
+    width: 50px;
+    height: 35px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 95px;
+    cursor: pointer;
+    @media ($minLarge) {
+      display: none;
+    }
+    svg {
+      color: #000;
+      &.clicked {
+        color: $blue-color;
+      }
+    }
+  }
+  &.fixed {
+    position: fixed;
+  }
+}

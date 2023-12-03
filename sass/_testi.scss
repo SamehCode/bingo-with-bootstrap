@@ -1,0 +1,38 @@
+@import './colors';
+.testi {
+  height: 550px;
+  position: relative;
+  color: #000;
+  .container {
+    height: 100%;
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: $blue-color;
+      top: 0;
+      left: 0;
+      height: 60%;
+      @media ($maxSmall) {
+        height: 65%;
+
+      }
+      width: 100%;
+      z-index: -1;
+    }
+    .carousel {
+      height: 100%;
+      .carousel-inner {
+        height: 100%;
+        .carousel-item {
+          height: 100%;
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+

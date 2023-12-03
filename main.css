@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&family=Kumbh+Sans:wght@400;700&family=Overpass:wght@300;500;600&family=Poppins:wght@400;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+header {
+  position: fixed;
+  background-color: transparent;
+  height: 85px;
+  width: 100%;
+  z-index: 999999;
+  transition: 0.3s;
+}
+@media (max-width: 991px) {
+  header {
+    background-color: white;
+    height: 60px;
+  }
+}
+header.scrl {
+  background-color: white;
+}
+header.scrl .row .logo h3 {
+  color: #000;
+}
+header.scrl .row ul.links li.sub > a {
+  color: #000;
+}
+header.scrl .row ul.links li.sub::after {
+  color: #000;
+}
+header.scrl .row ul.links li a {
+  color: #000 !important;
+}
+header.scrl .row ul.links li a.active {
+  color: #28ABE3 !important;
+}
+header .row {
+  height: 100%;
+}
+header .row .logo h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+@media (max-width: 991px) {
+  header .row .logo h3 {
+    color: #000;
+  }
+}
+@media (max-width: 991px) {
+  header .row ul.links {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  header .row ul.links.vert {
+    display: flex !important;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    width: 100%;
+    padding: 0.7rem 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  header .row ul.links.vert li a {
+    color: #000;
+  }
+}
+@media (max-width: 991px) and (min-width: 992px) {
+  header .row ul.links.vert li a {
+    color: #000 !important;
+  }
+}
+@media (max-width: 991px) {
+  header .row ul.links.vert li a.active {
+    color: #28ABE3 !important;
+  }
+}
+@media (min-width: 992px) {
+  header .row ul.links.vert li.sub a {
+    color: #000;
+  }
+}
+header .row ul.links.vert li.sub a.active {
+  color: #28ABE3;
+}
+header .row ul.links.vert li.sub a ul.drop-menu.clicked {
+  position: static;
+  min-width: 550px;
+  padding: 0.5rem;
+  margin-left: -15rem;
+}
+header .row ul.links.vert li.sub a ul.drop-menu.clicked li {
+  text-align: center;
+}
+header .row ul.links.vert li::after {
+  right: -20px;
+  color: #000;
+}
+header .row ul.links.vert a {
+  color: #000;
+}
+header .row li {
+  text-align: center;
+  width: 85px;
+  width: 12.5%;
+}
+header .row li.sub {
+  position: relative;
+  padding-right: 8px;
+}
+header .row li.sub:hover::after {
+  transform: rotate(180deg);
+}
+header .row li.sub::after {
+  content: "\f107";
+  position: absolute;
+  right: -1px;
+  font-size: 10px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: white;
+  top: 6px;
+}
+header .row li.sub ul.drop-menu.clicked {
+  visibility: visible;
+  position: static;
+  width: 550px;
+  margin-left: -15rem;
+}
+@media (min-width: 992px) {
+  header .row li.sub ul.drop-menu.clicked {
+    width: 130px;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+  header .row li.sub ul.drop-menu.clicked li {
+    text-align: left !important;
+  }
+}
+header .row li.sub ul.drop-menu.clicked li {
+  text-align: center;
+}
+header .row li.sub ul.drop-menu.clicked li a {
+  color: white;
+}
+header .row li.sub a {
+  color: white;
+}
+header .row li a {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: white !important;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  font-weight: 700;
+}
+header .row li a.active {
+  color: #28ABE3 !important;
+}
+header .row li a:hover {
+  color: #28ABE3;
+}
+header .row li ul.drop-menu {
+  position: absolute;
+  background-color: #000;
+  visibility: hidden;
+  width: 120px;
+  padding: 8px;
+  top: 27px;
+  left: 0;
+  z-index: 999999;
+}
+header .row li ul.drop-menu li {
+  text-align: left;
+  padding: 8px;
+  width: 100%;
+}
+header .row li ul.drop-menu li.sub-2 {
+  height: 50px;
+  position: relative;
+}
+header .row li ul.drop-menu li.sub-2::after {
+  content: "\f107";
+  position: absolute;
+  right: 16px;
+  font-size: 10px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: white;
+  top: 15px;
+}
+header .row li ul.drop-menu li.sub-2 ul.sub2 {
+  visibility: hidden;
+  position: relative;
+  left: 100px;
+  top: -25px;
+  width: 120px;
+  z-index: 999999;
+}
+header .row li ul.drop-menu li.sub-2 ul.sub2.col-clicked {
+  visibility: visible;
+  position: static;
+  margin-top: 1.8rem;
+  width: 95%;
+  margin-left: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+header .row li ul.drop-menu li.sub-2 ul.sub2 li {
+  background-color: #000;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+header .row li ul.drop-menu li.sub-2 ul.sub2 li a {
+  color: white;
+}
+header .toggle {
+  width: 50px;
+  height: 35px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 95px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  header .toggle {
+    display: none;
+  }
+}
+header .toggle svg {
+  color: #000;
+}
+header .toggle svg.clicked {
+  color: #28ABE3;
+}
+header.fixed {
+  position: fixed;
+}
+
+.landing {
+  height: 100vh;
+  position: relative;
+  background-image: url(../theme/images/slider/slider-bg-2.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+.landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+.landing .carousel {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.landing .carousel .carousel-control-prev {
+  z-index: 99999;
+  width: 60px;
+  height: 60px;
+  background-color: #28ABE3;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -200px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.landing .carousel .carousel-control-prev.show {
+  left: 20px;
+}
+.landing .carousel .carousel-control-next {
+  z-index: 99999;
+  width: 60px;
+  height: 60px;
+  background-color: #28ABE3;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -200px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.landing .carousel .carousel-control-next.show {
+  right: 20px;
+}
+.landing .carousel .carousel-inner {
+  top: 35%;
+  z-index: 9999;
+}
+.landing .carousel .carousel-inner .carousel-item {
+  opacity: 0;
+  color: white;
+  text-transform: capitalize;
+}
+.landing .carousel .carousel-inner .carousel-item.active {
+  transition: 0.5s;
+  opacity: 1;
+}
+.landing .carousel .carousel-inner .carousel-item.active h1 {
+  animation: scroll-up 0.3s ease-in;
+}
+.landing .carousel .carousel-inner .carousel-item.active p {
+  animation: scroll-up 0.5s linear;
+  animation-delay: 1s;
+}
+.landing .carousel .carousel-inner .carousel-item.active button {
+  animation: scroll-up 0.7s linear;
+  animation-delay: 1.5s;
+}
+.landing .carousel .carousel-inner .carousel-item h1 {
+  line-height: 1.3;
+  font-size: 3rem;
+}
+.landing .carousel .carousel-inner .carousel-item p {
+  line-height: 1.5;
+  margin: 0.5rem 0;
+  font-size: 14px;
+}
+.landing .carousel .carousel-inner .carousel-item button {
+  border-radius: 1rem;
+  padding: 0.6rem 2rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: #28ABE3;
+}
+
+@keyframes scroll-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.we-offer .container .main-heading p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+  line-height: 1.6;
+  position: relative;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+}
+.we-offer .container .main-heading p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ccc;
+  height: 2px;
+  width: 70px;
+}
+.we-offer .container .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  perspective-origin: center center;
+  perspective: 600px;
+}
+.we-offer .container .features .feat {
+  flex-basis: calc(50% - 15px);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  transition: 0.3s;
+  transform-origin: center center 200px;
+}
+@media (min-width: 992px) {
+  .we-offer .container .features .feat {
+    padding: 4rem 2rem;
+  }
+}
+.we-offer .container .features .feat:hover {
+  transform: translateZ(6px);
+  box-shadow: 1px 1px 55px 1px #ddd, -1px -1px 55px 1px #ddd;
+}
+.we-offer .container .features .feat:hover .icon {
+  box-shadow: 2px 5px 55px 1px #ddd, 2px 5px 55px 1px #ddd;
+  background-color: white;
+}
+.we-offer .container .features .feat:hover .icon svg {
+  color: #28ABE3;
+}
+.we-offer .container .features .feat .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #28ABE3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.we-offer .container .features .feat .icon svg {
+  color: white;
+  font-size: 1.25rem;
+  transition: 0.3s;
+}
+.we-offer .container .features .feat h4 {
+  font-size: 1.25rem;
+}
+.we-offer .container .features .feat p {
+  font-size: 13px;
+  color: #777;
+}
+
+.bingo-agency .container .main-title p {
+  color: #777;
+  font-size: 14px;
+  margin: 1rem 0 3rem;
+}
+.bingo-agency .container .row .check-lis li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 1rem;
+}
+.bingo-agency .container .row .check-lis li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+}
+.bingo-agency .container .row .check-lis + a.btn {
+  padding: 0.5rem 2rem;
+  background-color: #28ABE3;
+  border-radius: 40px;
+}
+
+.create {
+  background-image: url(../theme/images/call-to-action/call-to-action-bg-2.jpg);
+  background-size: cover;
+}
+.create .text {
+  color: white;
+}
+.create .text h2 {
+  font-size: 1.5rem;
+}
+.create .text p {
+  margin: 1rem 0 2rem;
+}
+.create .text button.btn {
+  margin-bottom: 3rem;
+  padding: 0.5rem 2rem;
+  background-color: #28ABE3;
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+.stats .container .main-heading h2 {
+  font-size: 2rem;
+}
+.stats .container .main-heading p {
+  line-height: 1.7;
+  color: #777;
+  font-size: 14px;
+}
+.stats .container .stat svg {
+  color: #28ABE3;
+}
+.stats .container .stat p {
+  margin: 0.7rem 0;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.stats .container .stat span {
+  font-weight: bold;
+}
+
+.testi {
+  height: 550px;
+  position: relative;
+  color: #000;
+}
+.testi .container {
+  height: 100%;
+}
+.testi .container::before {
+  position: absolute;
+  content: "";
+  background-color: #28ABE3;
+  top: 0;
+  left: 0;
+  height: 65%;
+  width: 100%;
+  z-index: -1;
+}
+.testi .container .carousel {
+  height: 100%;
+}
+.testi .container .carousel .carousel-inner {
+  height: 100%;
+}
+.testi .container .carousel .carousel-inner .carousel-item {
+  height: 100%;
+}
+.testi .container .carousel .carousel-inner .carousel-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.latest-post .container .main-heading h2 {
+  position: relative;
+}
+.latest-post .container .main-heading h2::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: #ccc;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer .container .row .line {
+  color: #999;
+}
+footer .container .row .line.one p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+footer .container .row .line > h5 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+footer .container .row .line ul li {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+footer .container .row .line ul li:hover {
+  color: #28ABE3;
+}
+footer .copy {
+  font-size: 0.7rem;
+  color: #777;
+  letter-spacing: 1px;
+}
+footer .copy p span {
+  color: #28ABE3;
+}/*# sourceMappingURL=main.css.map */
