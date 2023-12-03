@@ -45,7 +45,7 @@ let carouselItems = document.querySelectorAll('.landing .carousel .carousel-item
 
 let countInt = setInterval(() => {
     let randomNum =  Math.floor(Math.random() * backImg.length)
-    document.getElementById('landing').style.backgroundImage = "url(" + '../theme/images/slider/' + backImg[randomNum] + '.jpg' + ")";
+    document.getElementById('landing').style.backgroundImage = "url(" + 'theme/images/slider/' + backImg[randomNum] + '.jpg' + ")";
     carouselItems.forEach(item => item.classList.remove('active'))
     carouselItems[randomNum].classList.add('active')
 
