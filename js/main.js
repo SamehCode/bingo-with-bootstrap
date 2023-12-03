@@ -66,7 +66,7 @@ leftArrow.onclick = prevSlide;
 rightArrow.onclick = nextSlide;
 
 function theChecker() {
-  document.getElementById('landing').style.backgroundImage = "url(" + '../theme/images/slider/' + backImg[currentSlide - 1] + '.jpg' + ")";
+  document.getElementById('landing').style.backgroundImage = "url(" + 'theme/images/slider/' + backImg[currentSlide - 1] + '.jpg' + ")";
   clearInterval(countInt);
   carouselItems.forEach(item => item.classList.remove('active'))
   carouselItems[currentSlide - 1].classList.add('active')
