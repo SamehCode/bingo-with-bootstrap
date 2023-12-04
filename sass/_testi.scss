@@ -1,3 +1,5 @@
+@use '../sass/vars' as *;
+@use '../sass/mixins' as *;
 @import './colors';
 .testi {
   height: 550px;

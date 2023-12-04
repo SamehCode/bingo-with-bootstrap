@@ -1,0 +1,40 @@
+.snake {
+  .main-title {
+    h2 {
+
+    }
+    p {
+      font-size: .9rem;
+      position: relative;
+      padding-bottom: 1rem;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 100px;
+        background-color: #ccc;
+      }
+    }
+  }
+  #snakeCarousel {
+    .carousel-inner {
+      .carousel-item {
+        transition: 3s;
+        transform: translateX(150%);
+        opacity: .3;
+        &.active {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        img {
+          height: 150px;
+
+        }
+
+      }
+    }
+  }
+}

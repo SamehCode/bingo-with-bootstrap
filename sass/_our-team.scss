@@ -1,0 +1,72 @@
+@import './colors';
+.our-team {
+  .main-heading {
+    h2 {
+
+    }
+    p {
+      font-size: .9rem;
+      position: relative;
+      padding-bottom: 1rem;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 100px;
+        background-color: #ccc;
+      }
+    }
+  }
+  .row {
+    .card {
+      overflow: hidden;
+
+      .image {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+          .socials {
+            opacity: 1;
+            height: 70px;
+            transform: translateY(0);
+
+          }
+        }
+        img {
+          transition: .3s;
+        }
+        .socials {
+          transform: translateY(30px);
+          background-color: rgba($blue-color, .7);
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 0;
+          opacity: 0;
+          transition: .3s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .icon {
+            width: 30px;
+            height: 30px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: .25rem;
+            svg {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

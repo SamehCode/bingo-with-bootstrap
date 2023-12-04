@@ -20,17 +20,17 @@ toggleBtn.onclick = function() {
 
 allLinks.forEach(link => {
 
-  link.addEventListener('click', (e) => {
-    e.preventDefault()
+  link.addEventListener('click', () => {
+    // e.preventDefault()
     allLinks.forEach(l => l.classList.remove('active'))
     link.classList.add('active')
     allDropMenus.forEach(m => m.classList.remove('clicked'))
-    if(link.parentElement.querySelector('ul.drop-menu').classList.contains('clicked')) {
-      link.parentElement.querySelector('ul.drop-menu').classList.remove('clicked')
-    } else {
-      link.parentElement.querySelector('ul.drop-menu').classList.add('clicked')
+    // if(link.parentElement.querySelector('ul.drop-menu').classList.contains('clicked')) {
+    //   link.parentElement.querySelector('ul.drop-menu').classList.remove('clicked')
+    // } else {
+    //   link.parentElement.querySelector('ul.drop-menu').classList.add('clicked')
 
-    }
+    // }
   })
 })
 
@@ -45,7 +45,7 @@ let carouselItems = document.querySelectorAll('.landing .carousel .carousel-item
 
 let countInt = setInterval(() => {
     let randomNum =  Math.floor(Math.random() * backImg.length)
-    document.getElementById('landing').style.backgroundImage = "url(" + 'theme/images/slider/' + backImg[randomNum] + '.jpg' + ")";
+    document.getElementById('landing').style.backgroundImage = "url(" + '../theme/images/slider/' + backImg[randomNum] + '.jpg' + ")";
     carouselItems.forEach(item => item.classList.remove('active'))
     carouselItems[randomNum].classList.add('active')
 
@@ -66,7 +66,7 @@ leftArrow.onclick = prevSlide;
 rightArrow.onclick = nextSlide;
 
 function theChecker() {
-  document.getElementById('landing').style.backgroundImage = "url(" + 'theme/images/slider/' + backImg[currentSlide - 1] + '.jpg' + ")";
+  document.getElementById('landing').style.backgroundImage = "url(" + '../theme/images/slider/' + backImg[currentSlide - 1] + '.jpg' + ")";
   clearInterval(countInt);
   carouselItems.forEach(item => item.classList.remove('active'))
   carouselItems[currentSlide - 1].classList.add('active')

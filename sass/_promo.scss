@@ -1,0 +1,23 @@
+.promo {
+  .main-title {
+    h2 {
+
+    }
+    p {
+
+    }
+  }
+  .container {
+    .row {
+      .video {
+        position: relative;
+        height: 300px;
+        iframe {
+          position: absolute;
+          transform: translateX(-50%);
+          left: 50%;
+        }
+      }
+    }
+  }
+}

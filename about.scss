@@ -1,14 +1,17 @@
 @use './sass/vars' as *;
 @use './sass/colors' as *;
+@use './sass/mixins' as *;
 @use './sass/global-rules' as *;
 @use './sass/header' as *;
-@use './sass/landing' as *;
-@use './sass/we-offer' as *;
-@use './sass/bingo-agency' as *;
+@use './sass/about-landing' as *;
+@use './sass/we-create' as *;
+@use './sass/promo' as *;
+@use './sass/snake' as *;
+@use './sass/our-team' as *;
+
+
 @use './sass/create' as *;
 @use './sass/stats' as *;
-@use './sass/testi' as *;
-@use './sass/latest-post' as *;
-@use './sass/about-landing' as *;
+
 @use './sass/footer' as *;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&family=Kumbh+Sans:wght@400;700&family=Overpass:wght@300;500;600&family=Poppins:wght@400;700;800&display=swap');

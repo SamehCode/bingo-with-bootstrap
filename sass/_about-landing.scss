@@ -1,0 +1,28 @@
+@use './mixins' as *;
+.about-landing {
+  height: 250px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url(../theme/images/about/about-header.jpg);
+  background-size: cover;
+  .overlay {
+    @include overlay;
+    background-color: rgba(black, .8);
+  }
+  .container {
+      z-index: 99;
+    nav {
+      margin: auto;
+      width: fit-content;
+      ol {
+        li {
+          color: rgba(white, .8) !important;
+          margin-left: .5rem;
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

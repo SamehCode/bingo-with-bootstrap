@@ -23,21 +23,12 @@
 
 
 @mixin overlay {
-  .overlay {
+
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-  }
-}
 
-$maxMobile : 'max-width = 575px';
-$minSmall : 'min-width = 576px';
-$maxSmall : 'max-width = 767px';
-$minMedium : 'min-width = 768px';
-$maxMedium : 'max-width = 991px';
-$minLarge : 'min-width = 992px';
-$maxLarge : 'max-width = 1199px';
-$xLarge : 'max-width = 1200px';
+}
